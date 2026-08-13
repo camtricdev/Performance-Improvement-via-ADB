@@ -1,0 +1,21 @@
+Perintah untuk Mengembalikan ke Normal (Default)
+Jika ingin mengembalikan semua pengaturan sistem ke bawaan pabrik, jalankan perintah-perintah ini:
+
+* Mematikan Mode Performa Tinggi:
+  settings put global high_performance_mode 0
+* Mengembalikan Thermal Service:
+  settings delete global thermal_limit_constant
+* Reset status Thermal Override:
+  cmd thermal reset
+* Mengembalikan profil daya default:
+  settings delete global power_idil_mode
+* Mengaktifkan kembali Adaptive Battery:
+  settings put global adaptive_battery_management 1
+* Reset Hardware Acceleration & GPU UI:
+  settings delete global hardware_accelerated_v2
+  settings delete global force_hw_ui
+* Reset Jaringan & Wi-Fi:
+  settings put global wifi_scan_always_enabled 0
+  settings put global wifi_low_latency_mode_allowed 0
+* Hapus Shizuku dari Whitelist:
+  dumpsys deviceidle whitelist -moe.shizuku.privileged.api
